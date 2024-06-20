@@ -3,7 +3,7 @@ pessoas = []
 codigo = 1
 contine = False
 
-while contine == True:
+while codigo > 0:
    codigo = int(input('Digite o codigo da pessoa: '))
    if codigo > 0:
     nome = input('Digite o nome da pessoa: ')
@@ -13,12 +13,15 @@ while contine == True:
 
 print(pessoas)
 
-salario_max = float(input('Informe o valor maximo do salário: '))
+salario_max = -1
 
-if salario_max < 0:
-  print('Digite seu dados novamente')
-  contine = True
-else:
-  contine = False
+while salario_max < 0:
+    salario_max = float(input('Informe o valor máximo do salário: '))
+    if salario_max > 0:
+      print(f'Valor válido. {salario_max}')
 
+
+for pessoa in pessoas: 
+  if salario <= salario_max:
+    print(f'A pessoa {pessoa} recebe o salario {salario} e o seu salário máximo é de {salario_max}')
 
