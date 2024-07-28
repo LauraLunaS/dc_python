@@ -1,0 +1,131 @@
+def digitos(x):
+	out = []
+	algs = str(x)
+	for i in range(1,len(algs)+1):
+		aux = str(x%(10**i))
+		digit = aux[0]
+		out.append(digit)
+	return out
+
+def contar_algs(x, alg):
+	out = 0
+	for i in x:
+		if i == str(alg):
+			out+=1
+	return out
+	
+num = int(input('digite um numero: '))
+while num>0:
+	while num > 99999:
+		num = int(input('o numero nao pode ser maior que 99999: '))
+	digs = digitos(num)
+	noves = contar_algs(digs, 9)
+	print(f'esse digito tem {noves} digito(s) nove(s)')
+	num = int(input('digite um numero: '))
+-----------------------------------------------------------------------------------
+
+def invert(x):
+	digito = str(x)
+	invertido = ''
+	i = len(digito) - 1
+	while i != -1:
+		invertido+=digito[i]
+		i-=1
+	invertido = int(invertido)
+	return invertido
+
+num = int(input('digite um numero maior que 100: '))
+while num<=100:
+	num = int(input('digite um numero maior que 100: '))
+for i in range(100, num):
+	if i == invert(i):
+		print(i)
+	
+
+------------------------------------------------------------------------------------
+
+def mdc(x,y):
+	out = 1
+	if y>x:
+		x,y = y,x
+	for i in range(1,y+1):	
+		if x%i == 0 and y%i == 0 and i>out:
+			out = i
+	return out
+		
+def mmc(x,y):
+	out = x*y
+	if y>x:
+		x,y=y,x
+	for i in range(y, x*y+1):
+		if i%y==0 and i%x==0 and i<x*y:
+			out = i
+	return out
+		
+
+def primalidade(x):
+	if x == 1:
+		return False
+	for i in range(2,int(sqrt(x)+1)):
+		if x%i == 0:
+			return False
+	return True
+
+def perfeicao(x):
+	soma = 0
+    	for i in range(1,int((x/2)+1)):
+		if x%i ==0:
+			soma+=i
+	if x == soma:
+		return True
+	else:
+		return False
+
+-------------------------------------------------------------------
+
+num = int(input())
+while num<3:
+	num = int(input())
+
+for i in range(2,num):
+	if primalidade(i):
+		print(f'{i} é primo')
+
+--------------------------------------------------------------------
+
+
+num = int(input())
+while num<3:
+	num = int(input())
+
+for i in range(2,num):
+	if perfeicao(i):
+		print(f'{i} é primo')
+
+---------------------------------------------------------------------
+
+def serie6a(n, nu=2, de=500):
+	res = nu/de
+	if n>1:
+		if n%2==0:
+			res+= serie6a(n-1,-5,de+10)
+		else:
+			res+= serie6a(n-1,2,de+10)
+	return res
+
+
+
+
+
+		
+
+
+		
+
+
+
+
+
+
+
+

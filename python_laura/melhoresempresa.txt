@@ -1,0 +1,6 @@
+Matricula: 12345, Sexo: 1, Pontos: 61000, Nome: Joao Francisco                     
+Matricula: 34567, Sexo: 2, Pontos: 51000, Nome: Ana Joana                          
+Matricula: 45678, Sexo: 1, Pontos: 21000, Nome: Jose Francisco                     
+Matricula: 56789, Sexo: 1, Pontos: 31000, Nome: Joao Pedro                         
+Matricula: 61234, Sexo: 1, Pontos: 71000, Nome: Jose Francisco                     
+Matricula: 72345, Sexo: 2, Pontos: 41000, Nome: Ana Valeria                        
